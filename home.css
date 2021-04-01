@@ -5,7 +5,7 @@ body{          /*para resetar o default*/
 }
 
 .header{
-    padding-top: 20px;    
+    padding-top: 8px;    
     background: #232323;
     width: 100%;               
     height: 80px;
@@ -13,7 +13,8 @@ body{          /*para resetar o default*/
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.caixa{
+/* CABEÇALHO */
+.container{
     max-width: 1200px;
     height: 100%;
     margin: 0 auto;
@@ -21,13 +22,14 @@ body{          /*para resetar o default*/
 
 .header span{
     float: left;
-    font-size: 25px;
-    padding-top: 10px;
+    font-size: 30px;
+    padding-top: 20px;
     font-weight: bold;
 }
 
 .header nav{
     float: right;
+    padding-top: 12px;
 }
 
 ul{
@@ -44,3 +46,89 @@ ul li{
 .laranja{
     color: #FF4207;
 }
+
+/* CONFIRA AS ATUALIZAÇÕES */
+#button{
+    background-color: #FF4207;
+    color: white;
+}
+
+/* IMAGEM */
+.apresentacao{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(Imagens/team.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 400px;
+    color: white;
+    margin: 0;
+}
+
+.apresentacao h3{
+    font-size: 70px;
+    margin: 0;
+    padding-top: 65px;
+}
+
+.apresentacao p{
+    font-size: 25px;
+    padding-top: 40px;
+}
+
+/* SEARCH BOX */
+.searchbox h3{
+    font-size: 20px;
+    color: white;
+    float: left;
+    margin: 0;
+    margin-top: 20px;
+}
+
+.searchbox nav{
+    float: right;
+    margin-bottom: 40px;;
+}
+
+.footer{
+    height:200px;
+    padding-top: 36px;
+    display: flex;
+    width: 100%;
+}
+
+#missao{
+    width: 100px;
+    margin-left: 7%;
+}
+
+#visao{
+    width: 100px;
+    margin-left: 6%;
+}
+
+#valores{
+    width: 100px;
+    margin-right: 7%;
+}
+
+.container_mvv{
+    max-width: 1500px;
+}
+
+.mvv{
+    margin-inline: 149px;
+    max-width: 150px;
+    float: left;
+    text-align: center;
+}
+
+
+#last{
+    background-color: #FF4207;
+    height: 50px;
+    text-align: center;
+    padding-top: 30px;
+    color: white;
+}
+
