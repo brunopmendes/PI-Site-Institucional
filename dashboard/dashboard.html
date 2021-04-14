@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="charts.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.0.2/chart.min.js"
+        integrity="sha512-dnUg2JxjlVoXHVdSMWDYm2Y5xcIrJg1N+juOuRi0yLVkku/g26rwHwysJDAMwahaDfRpr1AxFz43ktuMPr/l1A=="
+        crossorigin="anonymous"></script>
+    <title>Dash</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <span id="text">
+              <span style="color: orangered;">Gráficos</span>  Bruno Mendes
+            </span>
+
+            <nav>
+                <ul>
+                    <li><a href="#">voltar a página inicial</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="graficos">
+        <div class="graf1">
+            <canvas id="myChart"></canvas>
+        </div>
+
+        <div class="graf2">
+            <canvas class="img-canvas" id="myChart1"></canvas>
+        </div>
+    </div>
+
+    <footer>
+        Bruno Pinheiro Mendes 2021 © Todos os direitos reservados
+    </footer>
+</body>
+
+</html>
+
+<script>
+
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var ctx1 = document.getElementById('myChart1').getContext('2d');
+
+    var myChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Sensores - SP', 'Sensores - RJ', 'Sensores - AM', 'Sensores - PA', 'Sensores - BA', 'Sensores - RS'],
+            datasets: [{
+                label: '# of Votes',
+                data: [12, 19, 3, 5, 2, 3],
+                backgroundColor: [
+                    'rgba(195, 50, 30)',
+                    'rgba(251, 255, 0, 0.8)',
+                    'rgba(51, 136, 206, 0.767)',
+                    'rgba(112, 131, 146, 0.836)',
+                    'rgba(38, 118, 103, 0.836)',
+                    'rgba(17, 27, 25, 0.836)'
+                ],
+                borderColor: [
+                    'rgba(195, 50, 30, 2)',
+                    'rgba(251, 255, 0, 2)',
+                    'rgba(51, 136, 206, 2)',
+                    'rgba(112, 131, 146, 2)',
+                    'rgba(38, 118, 103, 2)',
+                    'rgba(17, 27, 25, 2)'
+                ],
+                borderWidth: 2
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    var myChart1 = new Chart(ctx1, {
+        type: 'line',
+        data: {
+            labels: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo'],
+            datasets: [{
+                label: 'Temperatura da semana',
+                data: [12, 19, 3, 5, 2, 3, 8],
+                backgroundColor: [
+                    'rgba(195, 50, 30)'
+
+                ],
+                borderColor: [
+                    'rgba(195, 50, 30, 2)'
+                ],
+                borderWidth: 2
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+</script>
